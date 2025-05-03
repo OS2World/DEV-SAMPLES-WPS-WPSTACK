@@ -1,0 +1,38 @@
+#include <os2.h>
+#include "wpstack.rch"
+
+ICON  ID_OBJECTICON    WPSTACK.ICO
+
+DLGTEMPLATE DLG_STYLE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", DLG_STYLE, 0, 0, 224, 200, NOT FS_DLGBORDER
+    BEGIN
+        /*
+         * Create output fields for stack object count statistics.
+         * Will display them on every object.
+         */
+        LTEXT           "Awake Stack Count:"  -1,  10, 140,  85,  8
+        LTEXT           ""        DLG_AWAKECOUNT, 100, 140,  25,  8
+        LTEXT           "Total Stack Count:"  -1,  10, 130,  85,  8
+        LTEXT           ""   DLG_PERSISTENTCOUNT, 100, 130,  25,  8
+
+        /*
+         * Create an entry field for specifying text to push
+         * and a list box for the current stack contents
+         */
+        LTEXT           "New item to push:"  -1,  10, 120,  76,  8
+        ENTRYFIELD      "",         DLG_NEWITEM,  10, 105, 180,  8,
+                        ES_MARGIN
+
+        LTEXT           "Stack contents:",   -1,  10,  90,  76,  8
+        LISTBOX                    DLG_ITEMLIST,  10,  30, 180, 54,
+                        LS_HORZSCROLL
+
+        /*
+         * Align the push button along the bottom
+         */
+        PUSHBUTTON      "P~ush",   DLG_PUSH,        7, 7, 38, 14
+        PUSHBUTTON      "P~op",    DLG_POP,        57, 7, 38, 14
+        PUSHBUTTON      "~Help",   DLG_HELP,      107, 7, 38, 14
+    END
+END

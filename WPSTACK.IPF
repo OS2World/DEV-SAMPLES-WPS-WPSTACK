@@ -1,0 +1,39 @@
+:userdoc.
+.*--------------------------------------------------------------
+.*  Main window extended help panel
+.*--------------------------------------------------------------
+.*
+:h1 res=256 name=PANEL_MAIN.Workplace Shell Stack Object
+:i1 id=abtStl.Workplace Shell Stack Object
+:p.
+The Workplace Shell Stack object is a sample Workplace Shell SOM
+application that demonstrates the use of Workplace
+Shell setup and cleanup methods.
+The application provides a new object class, Stack, whose
+instances implement standard programming push down stacks.
+WPAbstract is the parent class of the Stack class providing persistence
+of the stack entries, via the OS2.INI file.
+The Stack class also maintains the number of permanent
+object instances and currently awaken objects
+(instantiated in memory).
+:p.
+A Settings notebook page has been added to each object allowing the
+user to view a stacks contents, push new items onto the stack, and
+pop existing items from the stack.
+The awake and total object counts are also displayed on each
+object's new notebook page.
+:p.
+:hp2.Pushing Items onto the Stack:ehp2.
+:p.
+To push a new item onto the top of the stack, enter a text string in
+the input field labeled New item to push and click on the
+Push push button.
+The pushed item will appear at the top of the list.
+:hp2.Popping Items from the Stack:ehp2.
+:p.
+To pop the top item from the stack just click on the
+Pop push button.
+The popped item will be removed from the list and appear in
+the New item to push field.
+.*
+:euserdoc.
