@@ -1,0 +1,376 @@
+** EXPERIMENTAL (HLL) ** Open Watcom Linker Version 2.0.1
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       26/09/07 19:18:09
+Executable Image: release\wpstack.dll
+creating an OS/2 32-bit dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:00000000        00001220
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           0001:00000000   00000007
+_TEXT                  CODE           AUTO           0001:00000010   00003483
+_NULL                  BEGDATA        DGROUP         0002:00000000   00000004
+_AFTERNULL             BEGDATA        DGROUP         0002:00000004   00000000
+CONST                  DATA           DGROUP         0002:00000004   000004dc
+CONST2                 DATA           DGROUP         0002:000004e0   00000000
+_DATA                  DATA           DGROUP         0002:000004e0   000004c0
+XIB                    DATA           DGROUP         0002:000009a0   00000000
+XI                     DATA           DGROUP         0002:000009a0   0000000c
+XIE                    DATA           DGROUP         0002:000009ac   00000000
+YIB                    DATA           DGROUP         0002:000009ac   00000000
+YI                     DATA           DGROUP         0002:000009ac   00000006
+YIE                    DATA           DGROUP         0002:000009b2   00000000
+TIB                    DATA           DGROUP         0002:000009b2   00000000
+TI                     DATA           DGROUP         0002:000009b2   00000000
+TIE                    DATA           DGROUP         0002:000009b2   00000000
+DATA                   DATA           DGROUP         0002:000009b2   00000000
+_BSS                   BSS            DGROUP         0002:000009b4   0000086c
+STACK                  STACK          DGROUP         0002:00001220   00000000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: src\wpstack.obj(D:\projects\wps\wpstack\src\wpstack.c)
+0002:00000528  StackClassData
+0002:00000540  StackCClassData
+0002:0000072c  M_StackClassData
+0002:00000740  M_StackCClassData
+0001:00000010  StackNewClass
+0001:00000185  M_StackNewClass
+0001:0000025e+ stk_InsertStackPage
+0001:00000311+ stk_Lock
+0001:000003f9+ stk_Pop
+0001:000004c8+ stk_Push
+0001:0000058f+ stk_Unlock
+0001:000005f4+ stk_wpAddSettingsPages
+0001:00000657+ stk_wpFree
+0001:000006c2+ stk_wpInitData
+0001:00000740+ stk_wpObjectReady
+0001:000007b6+ stk_wpRestoreState
+0001:000008d1+ stk_wpSaveState
+0001:0000099b+ stk_wpSetup
+0001:00000b0e+ stk_wpSetupOnce
+0001:00000b75+ stk_wpUnInitData
+0001:00000bf3+ stkM_clsDecObjectCount
+0001:00000c7f+ stkM_clsIncObjectCount
+0001:00000ceb+ stkM_clsQueryModuleHandle
+0001:00000d34+ stkM_clsQueryObjectCount
+0001:00000d9a+ stkM_wpclsInitData
+0001:00000e58+ stkM_wpclsQueryDefaultHelp
+0001:00000eb5+ stkM_wpclsQueryDefaultView
+0001:00000eef+ stkM_wpclsQueryIconData
+0001:00000f52+ DialogProc
+0002:000008b8+ _vpszClassName
+0002:000008bc+ _vpszHelpLibrary
+Module: C:\WATCOM/lib386/os2\clib3r.lib(stk)
+0001:00001239* __STK
+0001:00001229  __CHK
+0001:00001268* __GRO
+0001:00001258* __STKOVERFLOW_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(memset.c)
+0001:00001290  memset_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(memcpy.c)
+0001:000012b0  memcpy_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(strlen.c)
+0001:000012d0  strlen_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(strcpy.c)
+0001:000012f0  strcpy_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(_iltoa__.asm)
+0001:00001314  _ltoa_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(dstrt386)
+0001:0000131a  __DLLstart_
+0001:0000131a* __DLLstartw_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(xmsgo32.c)
+0001:00001380+ __exit_with_msg_
+0001:000013d0  __fatal_runtime_error_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(maino32.c)
+0002:000008d0  ___FirstThreadData
+0002:000008d4  ___GetThreadPtr
+0002:000008d8  __AccessFileH
+0002:000008dc  __ReleaseFileH
+0002:000008e0  __AccessIOB
+0002:000008e4  __ReleaseIOB
+0002:000008e8  __AccessNHeap
+0002:000008ec  __AccessFHeap
+0002:000008f0  __ReleaseNHeap
+0002:000008f4  __ReleaseFHeap
+0001:000013f6  __threadstack_
+0001:000013fd  __threadid_
+0001:00001404* __OS2MainInit_
+0001:00001473  __OS2Init_
+0001:000014b1  __OS2Fini_
+0001:000014b9  __shutdown_stack_checking_
+0001:000014ce  __exit_
+0002:000008f8  __AccessTDList
+0002:000008fc  __ReleaseTDList
+0002:00000900  ___sig_init_rtn
+0002:00000904  ___sig_fini_rtn
+0002:00000908  __threadstksize
+0002:0000090c+ ___process_fini
+0002:000009e8  ___Is_DLL
+0002:000009ec+ ___saved_CS
+Module: C:\WATCOM/lib386/os2\clib3r.lib(__stos)
+0001:00001520  __STOSB
+0001:00001557* __STOSD
+Module: C:\WATCOM/lib386/os2\clib3r.lib(ltoa.c)
+0001:000015d0+ ultoa_
+0001:00001620  ltoa_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(dmaino32.c)
+0001:00001644  __LibMain
+Module: C:\WATCOM/lib386/os2\clib3r.lib(segdefns)
+0001:00000003  ___begtext
+0002:00000000* __nullarea
+0002:000009a0  __Start_XI
+0002:000009ac  __End_XI
+0002:000009ac  __Start_YI
+0002:000009b2  __End_YI
+Module: C:\WATCOM/lib386/os2\clib3r.lib(enterdb.c)
+0001:00001860  __EnterWVIDEO_
+0002:00000910+ ___WD_Present
+Module: C:\WATCOM/lib386/os2\clib3r.lib(crwdata)
+0002:00000956  __osmajor
+0002:00000957  __osminor
+0002:00000924  __LpDllName
+0002:00000928  __LpwCmdLine
+0002:0000092c  __LpwPgmName
+0002:00000930  __LpwDllName
+0002:0000091c  __LpCmdLine
+0002:00000920  __LpPgmName
+0002:00000914* __dynend
+0002:00000918  __curbrk
+0002:00000934* __STACKLOW
+0002:00000938* __STACKTOP
+0002:0000093c  __ASTACKSIZ
+0002:00000940  __ASTACKPTR
+0002:00000944* __cbyte
+0002:00000948* __cbyte2
+0002:0000094c* __child
+0002:00000952  __Envptr
+0002:00000950  __no87
+0002:00000958* ___FPE_handler
+Module: C:\WATCOM/lib386/os2\clib3r.lib(cinit.c)
+0001:00001890  __CommonInit_
+0002:00000e00  ___hmodule
+Module: C:\WATCOM/lib386/os2\clib3r.lib(initrtns.c)
+0001:000018b0  __InitRtns
+0001:00001900  __FiniRtns
+Module: C:\WATCOM/lib386/os2\clib3r.lib(alphabet.c)
+0002:000004b8  ___Alphabet
+Module: C:\WATCOM/lib386/os2\clib3r.lib(lmaino32.c)
+0001:00001960  LibMain
+Module: C:\WATCOM/lib386/os2\clib3r.lib(nfree.c)
+0001:00001980  _nfree_
+0001:00001980  free_
+0002:00000e04  ___MiniHeapFreeRover
+Module: C:\WATCOM/lib386/os2\clib3r.lib(mthread.c)
+0001:00001ad0+ __CloseSemaphore_
+0001:00001b40+ __AccessIOB_
+0001:00001b50+ __ReleaseIOB_
+0001:00001b60+ __AccessFileH_
+0001:00001b70+ __ReleaseFileH_
+0001:00001b80+ __AccessNHeap_
+0001:00001b90+ __ReleaseNHeap_
+0001:00001ba0+ __AccessFHeap_
+0001:00001bb0+ __ReleaseFHeap_
+0001:00001bc0+ __AccessTDList_
+0001:00001bd0+ __AccessSemaphore_
+0001:00001c30+ __ReleaseTDList_
+0001:00001c40+ __ReleaseSemaphore_
+0001:00001c70+ __MultipleThread_
+0001:00001cb0  __AllocInitThreadData_
+0001:00001d00  __FreeInitThreadData_
+0001:00001d10  __OS2AddThread_
+0001:00001d80  __OS2RemoveThread_
+0001:00001dd0  __InitMultipleThread_
+0002:0000095c+ ___AccessSema4
+0002:00000960+ ___ReleaseSema4
+0002:00000964+ ___CloseSema4
+Module: C:\WATCOM/lib386/os2\clib3r.lib(ddgrpo32.c)
+0001:00002030  __disallow_single_dgroup_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(nmalloc.c)
+0001:00002280+ _use_os2_high_mem_
+0001:000022b0* _os2lmalloc_
+0001:000022e0* _os2hmalloc_
+0001:00002320  _nmalloc_
+0001:00002320  malloc_
+0002:00000968  ___nheapbeg
+0002:0000096c  ___MiniHeapRover
+0002:00000970  ___LargestSizeB4MiniHeapRover
+0002:00001214  __os2_use_obj_any
+Module: C:\WATCOM/lib386/os2\clib3r.lib(atouni.c)
+0001:00002460  _atouni_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(trdalloc.c)
+0001:000024a0  __InitThreadProcessing_
+0001:000024c0  __FiniThreadProcessing_
+0002:00001218  ___ThreadData
+Module: C:\WATCOM/lib386/os2\clib3r.lib(maxthrds.c)
+0002:00000974  ___MaxThreads
+Module: C:\WATCOM/lib386/os2\clib3r.lib(dosseg)
+0000:00001234  __DOSseg__
+Module: C:\WATCOM/lib386/os2\clib3r.lib(amblksiz.c)
+0002:00000978  __amblksiz
+Module: C:\WATCOM/lib386/os2\clib3r.lib(dllmno32.c)
+0001:00002520  DllMain
+Module: C:\WATCOM/lib386/os2\clib3r.lib(mem.c)
+0001:00002530  __MemAllocator
+0001:000025e0  __MemFree
+Module: C:\WATCOM/lib386/os2\clib3r.lib(trdlist.c)
+0001:00002770  __GetThreadData_
+0001:00002880  __ReallocThreadData_
+0001:000029f0  __AddThreadData_
+0001:00002a70  __RemoveThreadData_
+0001:00002ad0* __ResizeThreadDataList_
+0001:00002b20  __FreeThreadDataList_
+0001:00002b50* __ActiveThreads_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(mthrdini.c)
+0001:00002b70  __InitThreadData_
+0002:00000980  ___ThreadDataSize
+Module: C:\WATCOM/lib386/os2\clib3r.lib(calloc.c)
+0001:00002b90  calloc_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(register.c)
+0001:00002bc0  __initthread_
+0001:00002bd0* _beginthread_
+0001:00002be0  _endthread_
+0001:00002bf0* __RegisterThreadData_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(nheapmin.c)
+0001:00002c40  _nheapshrink_
+0001:00002c40* _nheapmin_
+0001:00002c40* _heapmin_
+0001:00002c40  _heapshrink_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(grownear.c)
+0001:00002f10  __ExpandDGROUP_
+0002:00000990  __os2_obj_any_supported
+Module: C:\WATCOM/lib386/os2\clib3r.lib(nmemneed.c)
+0001:00002f30  __nmemneed_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(thrdmax.c)
+0001:00002f40  __GETMAXTHREADS
+Module: C:\WATCOM/lib386/os2\clib3r.lib(libmno32.c)
+0001:00002f50  __dll_initialize_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(libterm.c)
+0001:00002f60  __dll_terminate_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(nrealloc.c)
+0001:00002f70* _nrealloc_
+0001:00002f70  realloc_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(thredo32.c)
+0001:000030d0  __CBeginThread_
+0001:00003170  __CEndThread_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(heapen.c)
+0001:00003190* _heapenable_
+0002:00000994  ___heap_enabled
+Module: C:\WATCOM/lib386/os2\clib3r.lib(nmsize.c)
+0001:000031c0  _nmsize_
+0001:000031c0* _msize_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(nexpand.c)
+0001:000031d0  _nexpand_
+0001:000031d0* _expand_
+0001:00003210+ __HeapManager_expand_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(chk8087.c)
+0001:000033e0  _fpreset_
+0001:00003400* __init_8087_
+0001:00003410  __chk8087_
+Module: C:\WATCOM/lib386/os2\clib3r.lib(_8087)
+0002:00000998  __8087
+0002:00000999  __real87
+Module: C:\WATCOM/lib386/os2\clib3r.lib(8087cw.c)
+0002:0000099c  __8087cw
+Module: C:\WATCOM/lib386/os2\clib3r.lib(init8087)
+0001:00003460  __x87id
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+SOMClassClassData                   som
+WPAbstractNewClass                  PMWP
+somBuildClass                       som
+WPObjectClassData                   PMWP
+somParentNumResolve                 som
+M_WPAbstractNewClass                PMWP
+M_WPObjectClassData                 PMWP
+SOM_TraceLevel                      som
+somPrintf                           som
+DosCreateMutexSem                   DOSCALLS
+DosRequestMutexSem                  DOSCALLS
+WinQueryQueueInfo                   PMWIN
+WinQueryAnchorBlock                 PMWIN
+WinPeekMsg                          PMWIN
+DosReleaseMutexSem                  DOSCALLS
+SOMObjectClassData                  som
+PrfWriteProfileData                 PMSHAPI
+somIdFromString                     som
+SOMClassMgrObject                   som
+SOMClassMgrClassData                som
+SOMFree                             som
+DosQueryModuleHandle                DOSCALLS
+PrfQueryProfileData                 PMSHAPI
+WinQueryWindowPtr                   PMWIN
+WinSetWindowPtr                     PMWIN
+WinSetDlgItemText                   PMWIN
+WinWindowFromID                     PMWIN
+WinSendMsg                          PMWIN
+WinQueryDlgItemText                 PMWIN
+WinDefDlgProc                       PMWIN
+DosWrite                            DOSCALLS
+DosQuerySysInfo                     DOSCALLS
+DosExit                             DOSCALLS
+DosGetInfoBlocks                    DOSCALLS
+DosQueryModuleName                  DOSCALLS
+DosCloseMutexSem                    DOSCALLS
+DosLoadModule                       DOSCALLS
+DosQueryProcAddr                    DOSCALLS
+DosOpen                             DOSCALLS
+DosClose                            DOSCALLS
+DosFreeMem                          DOSCALLS
+DosAllocMem                         DOSCALLS
+DosPostEventSem                     DOSCALLS
+DosCreateEventSem                   DOSCALLS
+DosCreateThread                     DOSCALLS
+DosCloseEventSem                    DOSCALLS
+DosWaitEventSem                     DOSCALLS
+DosDevConfig                        DOSCALLS
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+C:\os2tk45\som\lib\somtk.lib
+C:\WATCOM/lib386/os2\clib3r.lib
+C:\os2tk45\lib\os2386.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0000 (0.)
+Memory size:  46b3 (18099.)
+Link time: 00:00.21

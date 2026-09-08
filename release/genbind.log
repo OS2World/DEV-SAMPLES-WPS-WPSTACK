@@ -1,0 +1,6 @@
+ 
+Generating bindings for wpstack.idl...  
+somcpp: "idl\wpstack.idl", fopen: Message file not found.
+error: Cannot open file "idl\wpstack.idl".
+Removed "C:\var\temp\08e00000.CTN".
+genbind done.  

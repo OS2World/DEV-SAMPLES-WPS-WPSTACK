@@ -1,7 +1,8 @@
 #include <os2.h>
-#include "wpstack.rch"
+#include "wpstack_res.h"
 
-ICON  ID_OBJECTICON    WPSTACK.ICO
+/* ICON  ID_OBJECTICON    wpstack.ico */
+/* Place wpstack.ico in src\ to restore the custom icon. */
 
 DLGTEMPLATE DLG_STYLE LOADONCALL MOVEABLE DISCARDABLE
 BEGIN

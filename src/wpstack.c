@@ -48,16 +48,16 @@
 #define Stack_Class_Source
 #define M_Stack_Class_Source
 
-#include "stdlib.h"
-#include "string.h"
+#include <stdlib.h>
+#include <string.h>
 #define  INCL_PM
 #define  INCL_DOS
 #define  INCL_DOSERRORS
 #define  INCL_DEV
 #define  INCL_WPCLASS
 #define  INCL_WINWORKPLACE
-#include "os2.h"
-#include "wpstack.rch"
+#include <os2.h>
+#include "wpstack_res.h"
 #include "wpstack.ih"
 
 //
@@ -762,7 +762,7 @@ SOM_Scope ULONG SOMLINK stkM_clsDecObjectCount(
 //
 //**********************************************************************
 
-SOM_Scope ULONG somlink stkM_clsIncObjectCount(
+SOM_Scope ULONG SOMLINK stkM_clsIncObjectCount(
    M_Stack *somSelf,  // In - pointer to the class object
    ULONG ulCountType) // In - STK_AWAKECOUNT,
                       //      STK_PERSISTENTCOUNT
@@ -810,7 +810,7 @@ SOM_Scope ULONG somlink stkM_clsIncObjectCount(
 //
 //**********************************************************************
 
-SOM_Scope HMODULE somlink stkM_clsQueryModuleHandle(
+SOM_Scope HMODULE SOMLINK stkM_clsQueryModuleHandle(
    M_Stack *somSelf)  // In - pointer to the class object
 
 // Method return value out - resouce module handle
@@ -833,7 +833,7 @@ SOM_Scope HMODULE somlink stkM_clsQueryModuleHandle(
 //
 //**********************************************************************
 
-SOM_Scope ULONG somlink stkM_clsQueryObjectCount(
+SOM_Scope ULONG SOMLINK stkM_clsQueryObjectCount(
    M_Stack *somSelf,  // In - pointer to the class object
    ULONG ulCountType) // In - STK_AWAKECOUNT,
                       //      STK_PERSISTENTCOUNT
@@ -875,7 +875,7 @@ SOM_Scope ULONG somlink stkM_clsQueryObjectCount(
 //
 //**********************************************************************
 
-SOM_Scope void somlink stkM_wpclsInitData(
+SOM_Scope void SOMLINK stkM_wpclsInitData(
    M_Stack *somSelf)  // In - pointer to the class object
 {
    PSZ         psz;
@@ -919,7 +919,7 @@ SOM_Scope void somlink stkM_wpclsInitData(
 //
 //**********************************************************************
 
-SOM_Scope BOOL somlink stkM_wpclsQueryDefaultHelp(
+SOM_Scope BOOL SOMLINK stkM_wpclsQueryDefaultHelp(
    M_Stack *somSelf,       // In - pointer to the class object
    PULONG  pHelpPanelId,
    PSZ     pszHelpLibrary)
@@ -952,7 +952,7 @@ SOM_Scope BOOL somlink stkM_wpclsQueryDefaultHelp(
 //
 //**********************************************************************
 
-SOM_Scope ULONG somlink stkM_wpclsQueryDefaultView(
+SOM_Scope ULONG SOMLINK stkM_wpclsQueryDefaultView(
    M_Stack *somSelf)  // In - pointer to the class object
 {
    // M_StackData *somThis = M_StackGetData(somSelf);
@@ -1128,5 +1128,4 @@ MRESULT EXPENTRY DialogProc(HWND hwndDlg,
       } // End of default:
    }
    return mresultWpRtnCd;
-\}
-#pragma info(nouse)
+}

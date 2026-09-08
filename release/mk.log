@@ -1,0 +1,26 @@
+ 
+--- genbind ---  
+--- wmake ---  
+Open Watcom Make Version 2.0.1
+Portions Copyright (c) 1988-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See http://www.openwatcom.org/ for details.
+	wrc -r -fo=release\wpstack.res -Isrc -IC:\os2tk45\h src\wpstack.rc
+Open Watcom Windows and OS/2 Resource Compiler Version 2.0.1
+Portions Copyright (c) 1993-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See http://www.openwatcom.org/ for details.
+	wlink SYSTEM OS2V2_DLL 		NAME release\wpstack.dll 		FILE src\wpstack.obj 		OPTION QUIET 		OPTION MAP=release\wpstack.map 		LIBPATH C:\os2tk45\lib 		LIBPATH C:\os2tk45\som\lib 		LIB somtk 		EXP StackNewClass 		EXP M_StackNewClass 		EXP StackClassData 		EXP StackCClassData 		EXP M_StackClassData 		EXP M_StackCClassData 		@src\wpstack.def
+	wrc release\wpstack.res release\wpstack.dll
+Open Watcom Windows and OS/2 Resource Compiler Version 2.0.1
+Portions Copyright (c) 1993-2002 Sybase, Inc. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See http://www.openwatcom.org/ for details.
+	wipfc doc\wpstack.ipf
+Open Watcom OS/2 Help Compiler Version 2.0.1
+Copyright (c) 2023 Open Watcom Contributors. All Rights Reserved.
+Source code is available under the Sybase Open Watcom Public License.
+See http://www.openwatcom.org/ for details.
+	move doc\wpstack.hlp release\wpstack.hlp
+        1 file(s) moved.
+--- done ---  
